@@ -1,0 +1,39 @@
+﻿@model TokenJwt.Dto.UserTxtDto
+
+@{
+    ViewData["Title"] = "UserTxt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UserTxt</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserTxtDto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserTxtId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserTxtId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+    </dl>
+    
+    <form asp-action="UserTxt">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
